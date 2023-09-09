@@ -3,7 +3,7 @@
 ##### If you love to watch a video, you can find all these stuff in a video here
 <br/>
 
-[![Register GitLab runner instance with Docker Executor](https://img.youtube.com/vi/RFVCWlSmrOk/0.jpg)](https://www.youtube.com/watch?v=RFVCWlSmrOk)
+[![Register GitLab runner instance with Docker Executor](https://img.youtube.com/vi/Rvh7OZbDJ_o/0.jpg)](https://www.youtube.com/watch?v=Rvh7OZbDJ_o)
 
 run pipeline, nothing happens as we don't have a gitlab runner.
 
