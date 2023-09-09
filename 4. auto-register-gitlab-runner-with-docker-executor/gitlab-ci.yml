@@ -1,0 +1,4 @@
+build:
+  image: python:alpine
+  script:
+    - python --version
