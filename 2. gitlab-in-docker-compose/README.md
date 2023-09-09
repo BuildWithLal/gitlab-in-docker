@@ -104,4 +104,4 @@ docker compose up
 That was all about GitLab server in a container using docker compose.
 In the next part, i'll show you how to setup GitLab runner, connect it with GitLab server
 and register an executor to run CI/CDs jobs and pipelines
-[See here](3.%20setup-gitlab-runner-with-docker-executor/runner-instance.md)
+[See here](../3.%20setup-gitlab-runner-with-docker-executor/runner-instance.md)

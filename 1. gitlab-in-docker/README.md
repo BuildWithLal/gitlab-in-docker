@@ -87,4 +87,4 @@ docker run -p 8000:80 -v ./gitlab/config:/etc/gitlab -v ./gitlab/data:/var/opt/g
 
 All these commands seems like too much manual commands running. How we can combine all these
 into a single file and a single command?
-Here comes docker compose. [See here](2.%20gitlab-in-docker-compose)
+Here comes docker compose. [See here](../2.%20gitlab-in-docker-compose)

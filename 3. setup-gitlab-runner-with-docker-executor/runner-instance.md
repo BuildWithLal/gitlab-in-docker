@@ -61,4 +61,4 @@ gitlab-runner register  --url http://localhost:8088  --token glrt-J1n2U-kFyt_V8i
 gitlab-runner command is not available in gitlab-server.
 these commands need gitlab runner which will be a separate container or a machine with gitlab-runner cli
 
-In the next part, i'll show you how to setup gitlab runner container and and register an executor to run our jobs. [See here](3.%20setup-gitlab-runner-with-docker-executor/runner-executor.md)
+In the next part, i'll show you how to setup gitlab runner container and and register an executor to run our jobs. [See here](../3.%20setup-gitlab-runner-with-docker-executor/runner-executor.md)

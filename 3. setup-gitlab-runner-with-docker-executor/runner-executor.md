@@ -68,4 +68,4 @@ and run inside gitlab-runner to register our executor
 We can also automate this process. So the moment we start our container, we'll register our executor. and we can start running our pipelines and jobs
 
 in the next part, i'll show you how to auto register a job executor in a gitlab runner
-[See here](4.%20auto-register-gitlab-runner-with-docker-executor)
+[See here](../4.%20auto-register-gitlab-runner-with-docker-executor)
