@@ -1,3 +1,5 @@
+[![auto-register-gitlab-runner-with-docker-executor](https://img.youtube.com/vi/Rvh7OZbDJ_o/0.jpg)](https://www.youtube.com/watch?v=Rvh7OZbDJ_o)
+
 ----------
 Existing
 ----------
