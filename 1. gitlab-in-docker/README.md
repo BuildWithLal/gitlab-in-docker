@@ -9,7 +9,7 @@ GitLab official docker image on docker hub
 https://hub.docker.com/r/gitlab/gitlab-ce
 
 ```
-docker run --port 8000:80 gitlab/gitlab-ce
+docker run -p 8000:80 gitlab/gitlab-ce
 ```
 
 Wait a couple of mins and then visit
