@@ -1,7 +1,8 @@
-#### Run GitLab server using docker compose
+### Run GitLab server using docker compose
 
-##### If you love to watch a video, you can find all these stuff in a video here
-<br/>
+Read on Medium.com [GitLab Setup Using Docker Compose: A Beginner’s Guide](https://medium.com/@BuildWithLal/gitlab-setup-using-docker-compose-a-beginners-guide-3dbf1ef0cbb2)
+
+##### Watch it on YouTube
 
 [![GitLab Server in Docker Container using Docker Compose](https://img.youtube.com/vi/o5aR9aQUytQ/0.jpg)](https://www.youtube.com/watch?v=o5aR9aQUytQ)
 
