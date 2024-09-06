@@ -1,4 +1,4 @@
-### Run GitLab server using docker compose
+### GitLab Setup Using Docker Compose: A Beginner’s Guide
 
 Read on Medium.com [GitLab Setup Using Docker Compose: A Beginner’s Guide](https://medium.com/@BuildWithLal/gitlab-setup-using-docker-compose-a-beginners-guide-3dbf1ef0cbb2)
 
