@@ -4,15 +4,14 @@ services:
   gitlab-server:
     image: gitlab/gitlab-ce:latest
     container_name: gitlab-server
-    environment:
+environment:
+      GITLAB_ROOT_EMAIL: "admin@buildwithlal.com"
+      GITLAB_ROOT_PASSWORD: "Abcd@0123456789"
       GITLAB_OMNIBUS_CONFIG: |
         external_url 'http://localhost:8088'
         nginx['listen_port'] = 8088
-        gitlab_rails['initial_root_password'] = 'Abcd@0123456789'
-        puma['worker_processes'] = 0 # disable cluster mode to avoid more memory usage
     volumes:
       - ./gitlab/config:/etc/gitlab
-      - ./gitlab/logs:/var/log/gitlab
       - ./gitlab/data:/var/opt/gitlab
     ports:
       - '8088:8088'
