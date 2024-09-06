@@ -1,4 +1,4 @@
-### Run GitLab using docker
+### Dockerized GitLab: How to Easily Set Up Your Own GitLab Server
 
 <br/>
 
