@@ -1,4 +1,25 @@
-build:
-  image: python:alpine
+build with shell executor:
+  stage: build
+  tags:
+    - shell
+  script:
+    - date # print current date
+    - cat /etc/os-release # print os version for Linux
+
+build with docker executor:
+  stage: build
+  tags:
+    - docker
+  image: docker:24.0.5
+  script:
+    - docker info
+    - sleep 10
+
+build with docker executor default image:
+  stage: build
+  tags:
+    - docker
   script:
     - python --version
+    - sleep 10
+
