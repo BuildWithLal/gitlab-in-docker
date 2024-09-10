@@ -20,7 +20,5 @@ services:
     image: gitlab/gitlab-runner:alpine
     container_name: gitlab-runner
     network_mode: 'host'
-    
-    # new changes for mounting docker.sock from host to container
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
