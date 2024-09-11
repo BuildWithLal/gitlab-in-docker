@@ -9,7 +9,7 @@ This repo provides a detailed, step-by-step guide for setting up a custom GitLab
 #### Topics Covered:
 * [Dockerized GitLab: How to Easily Set Up Your Own GitLab Server](https://medium.com/@BuildWithLal/dockerized-gitlab-how-to-easily-set-up-your-own-gitlab-server-9a925be09c59)
 * [GitLab Setup Using Docker Compose: A Beginner’s Guide](https://medium.com/@BuildWithLal/gitlab-setup-using-docker-compose-a-beginners-guide-3dbf1ef0cbb2)
-* Integrating GitLab server and runner
+* [Dockerized GitLab CI: Setting Up and Connecting Your GitLab Runner](https://medium.com/@BuildWithLal/dockerized-gitlab-ci-setting-up-and-connecting-your-gitlab-runner-b810a02e42f2)
 * Register docker executor with GitLab to run pipelines
 * Auto register docker executor with GitLab to run pipelines
 
