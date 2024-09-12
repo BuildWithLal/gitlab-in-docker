@@ -1,0 +1,20 @@
+build with kaniko:
+  stage: build
+  tags:
+    - kaniko
+  image:
+    name: gcr.io/kaniko-project/executor:v1.23.2-debug
+    entrypoint: [""]
+  script:
+
+    - echo ${CI_PROJECT_DIR}
+
+    # conventional project with Dockerfile inside root dir
+    - /kaniko/executor --no-push
+
+    # Dockerfile is in some other directory than root dir
+    - /kaniko/executor --no-push --dockerfile "${CI_PROJECT_DIR}/src/mydockerfile"
+
+    # - /kaniko/executor --destination "${CI_REGISTRY_IMAGE}:${CI_COMMIT_TAG}"
+
+
