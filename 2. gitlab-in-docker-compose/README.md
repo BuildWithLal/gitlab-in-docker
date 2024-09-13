@@ -1,10 +1,5 @@
 ### GitLab Setup Using Docker Compose: A Beginner’s Guide
 
-Read on Medium.com [GitLab Setup Using Docker Compose: A Beginner’s Guide](https://medium.com/@BuildWithLal/gitlab-setup-using-docker-compose-a-beginners-guide-3dbf1ef0cbb2)
-
-##### Watch it on YouTube
-
-[![GitLab Server in Docker Container using Docker Compose](https://img.youtube.com/vi/o5aR9aQUytQ/0.jpg)](https://www.youtube.com/watch?v=o5aR9aQUytQ)
 
 We'll be creating exactly those same things we did in prev video to setup gitlab server in docker container
 BUT this time instead of running and managing everything using docker commands and passing flags using command line, we'll be handling it using docker compose. Which makes it easy to because it has yaml file where you can
