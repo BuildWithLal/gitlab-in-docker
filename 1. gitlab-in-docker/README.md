@@ -1,13 +1,5 @@
 ### Dockerized GitLab: How to Easily Set Up Your Own GitLab Server
 
-<br/>
-
-Read on Medium.com [Dockerized GitLab: How to Easily Set Up Your Own GitLab Server](https://medium.com/@BuildWithLal/dockerized-gitlab-how-to-easily-set-up-your-own-gitlab-server-9a925be09c59)
-
-
-##### Watch it on YouTube
-
-[![GitLab Server in Docker Container](https://img.youtube.com/vi/FaHdMUAQgck/0.jpg)](https://www.youtube.com/watch?v=FaHdMUAQgck)
 
 GitLab official docker image on docker hub
 https://hub.docker.com/r/gitlab/gitlab-ce
