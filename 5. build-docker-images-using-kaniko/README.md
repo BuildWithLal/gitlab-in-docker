@@ -3,7 +3,7 @@
 
 <br/>
 
-#### Job executor using Docker-in-Dockerservice
+#### Job executor using Docker-in-Docker service
 ![image](https://github.com/user-attachments/assets/ccb7f92b-09a3-4e4f-9f6d-47eda0f15521)
 
 
