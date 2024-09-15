@@ -4,6 +4,6 @@ build:
     tags:
         - docker
     script:
-        - docker login --username $CI_REGISTRY_USER --password $CI_REGISTRY_PASSWORD $CI_REGISTRY
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
         - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}" .
         - docker push "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}"
