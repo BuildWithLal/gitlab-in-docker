@@ -1,5 +1,5 @@
 
-#### Runner Registeration Command for Docker in Docker
+#### Runner Registeration Command for Docker using host's docker socket
 ```
 gitlab-runner register  --url http://localhost:8000 \
                         --token glrt-qL_FTjkAGqy7SHcYYStx \
