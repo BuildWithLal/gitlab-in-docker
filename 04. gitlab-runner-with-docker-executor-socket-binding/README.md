@@ -6,8 +6,8 @@ gitlab-runner register  --url http://localhost:8000 \
                         --executor docker \
                         --name "Docker Runner" \
                         --docker-image "python:3.10-alpine" \
-                        --docker-volumes "/certs/client" \
-                        --docker-network-mode "gitlab-in-docker" \
+                        --docker-volumes "/var/run/docker.sock:/var/run/docker.sock" \
+                        --docker-network-mode "host" \
 ```
 
 #### GitLab Networking
