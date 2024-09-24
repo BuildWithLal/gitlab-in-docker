@@ -1,0 +1,7 @@
+build with shell executor:
+  stage: build
+  tags:
+    - shell
+  script:
+    - date # print current date
+    - cat /etc/os-release # print os version for Linux

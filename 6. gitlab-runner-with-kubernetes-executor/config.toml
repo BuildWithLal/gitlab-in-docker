@@ -1,0 +1,45 @@
+concurrent = 1
+check_interval = 0
+connection_max_age = "15m0s"
+shutdown_timeout = 0
+
+[session_server]
+  session_timeout = 1800
+
+
+[[runners]]
+  name = "kubernetes"
+  url = "http://localhost:8000"
+  id = 2
+  token = "glrt-cgAaJpyx1zks4FZKQcde"
+  token_obtained_at = 2024-09-15T16:35:49Z
+  token_expires_at = 0001-01-01T00:00:00Z
+  executor = "kubernetes"
+  clone_url = "http://gitlab-server:8000"
+  [runners.custom_build_dir]
+  [runners.cache]
+    MaxUploadedArchiveSize = 0
+    [runners.cache.s3]
+    [runners.cache.gcs]
+    [runners.cache.azure]
+  [runners.kubernetes]
+    host = "https://localhost:46811"
+    cert_file = "/etc/gitlab-runner/kubernetes/cert/apiserver-kubelet-client.crt"
+    key_file = "/etc/gitlab-runner/kubernetes/cert/apiserver-kubelet-client.key"
+    ca_file = "/etc/gitlab-runner/kubernetes/cert/ca.crt"
+    privileged = true
+    bearer_token_overwrite_allowed = false
+    image = "docker:latest"
+    namespace = "default"
+    namespace_per_job = false
+    network_mode = "host"
+    [runners.kubernetes.init_permissions_container_security_context]
+      [runners.kubernetes.init_permissions_container_security_context.capabilities]
+    [runners.kubernetes.build_container_security_context]
+      [runners.kubernetes.build_container_security_context.capabilities]
+    [runners.kubernetes.helper_container_security_context]
+      [runners.kubernetes.helper_container_security_context.capabilities]
+    [runners.kubernetes.service_container_security_context]
+      [runners.kubernetes.service_container_security_context.capabilities]
+    [runners.kubernetes.volumes]
+    [runners.kubernetes.dns_config]

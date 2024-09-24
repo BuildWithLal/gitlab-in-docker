@@ -1,0 +1,17 @@
+build with docker executor:
+  stage: build
+  tags:
+    - docker
+  image: docker:24.0.5
+
+  script:
+    - docker run -d --rm --name nested-container1-in-pipelinejob alpine sleep 20
+    - docker run -d --rm --name nested-container2-in-pipelinejob alpine sleep 20
+
+build with docker executor default image: # default python image
+  stage: build
+  tags:
+    - docker
+  script:
+    - python --version
+    - sleep 10
