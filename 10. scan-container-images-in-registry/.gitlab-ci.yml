@@ -1,0 +1,35 @@
+include:
+  - template: Jobs/Container-Scanning.gitlab-ci.yml
+
+container_scanning:
+  allow_failure: false
+  variables:
+    CS_SEVERITY_THRESHOLD: 'medium' # low, medium, high anything below medium severity to not be reported by the analyzer
+    SECURE_LOG_LEVEL: 'debug' # debug, info, warn, error, fatal
+  before_script:
+    - sudo apt-get update -y && sudo apt-get install -y jq
+    - export CS_IMAGE="$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}"
+  script:
+    - gtcs scan
+    - HIGH_SEVERITY_COUNT=$(jq '.vulnerabilities | map(select(.severity=="High")) | length' gl-container-scanning-report.json )
+    - > 
+        if [[ $HIGH_SEVERITY_COUNT -gt 0 ]]
+        then
+          echo "High severity found"; exit 1
+        else
+          echo "No High severity found"
+        fi
+
+build:
+    stage: build
+    image: docker:latest
+    script:
+        - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY -u $CI_REGISTRY_USER --password-stdin
+        - docker build -t "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}" .
+        - docker push "$CI_REGISTRY_IMAGE:${CI_COMMIT_SHA:0:8}"
+
+deploy:
+  stage: deploy
+  image: alpine
+  script:
+    - echo "Deployed"

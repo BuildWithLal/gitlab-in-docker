@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+
+  gitlab-server:
+    image: 'gitlab/gitlab-ce:latest'
+    container_name: gitlab-server
+    environment:
+      GITLAB_ROOT_EMAIL: "admin@buildwithlal.com"
+      GITLAB_ROOT_PASSWORD: "Abcd@0123456789"
+      GITLAB_OMNIBUS_CONFIG: |
+        puma['worker_processes'] = 0 # disable cluster mode to avoid more memory usage
+        external_url 'http://localhost:8000'
+        nginx['listen_port'] = 8000
+        gitlab_rails['registry_enabled'] = true
+        registry_external_url 'http://localhost:5001'
+    ports:
+      - '8000:8000'
+      - '5001:5001'
+    volumes:
+      - ./gitlab/config:/etc/gitlab
+      - ./gitlab/data:/var/opt/gitlab
+
+  gitlab-runner:
+    image: gitlab/gitlab-runner:alpine
+    container_name: gitlab-runner
+    network_mode: 'host'
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
