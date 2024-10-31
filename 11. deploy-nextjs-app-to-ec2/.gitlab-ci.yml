@@ -1,0 +1,17 @@
+assume role:
+  image: registry.gitlab.com/gitlab-org/cloud-deploy/aws-base:latest
+  stage: build
+  id_tokens:
+    GITLAB_OIDC_TOKEN:
+      aud: https://gitlab.com
+  variables:
+    AWS_DEFAULT_REGION: us-east-1
+  before_script:
+    - mkdir -p ~/.aws
+    - echo "${GITLAB_OIDC_TOKEN}" > /tmp/web_identity_token
+    - echo -e "[profile default]\nrole_arn=arn:aws:iam::379406586218:role/GitLab\nweb_identity_token_file=/tmp/web_identity_token" > ~/.aws/config
+  script:
+    - cat ~/.aws/config
+    - cat /tmp/web_identity_token
+    - aws sts get-caller-identity
+    - aws s3 ls
