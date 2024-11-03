@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+
+  nextjs-app:
+    image: nextjs-app
+    container_name: nextjs-app
+    build:
+      context: .
+    ports:
+      - '${APP_PORT}:${APP_PORT}'
+    volumes:
+      - ./app:/app
+    env_file:
+      - .env
