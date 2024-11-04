@@ -7,6 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
+        <h1>Build With Lal</h1>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -17,7 +18,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            Get started by editing <code>src/app/page.tsx</code>.
+            <h3>Get started by editing <code>src/app/page.tsx</code>.</h3>
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>

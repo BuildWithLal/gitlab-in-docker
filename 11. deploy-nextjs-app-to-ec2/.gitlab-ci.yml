@@ -20,12 +20,16 @@ deploy:
   variables:
     AWS_DEFAULT_REGION: us-east-1
   before_script:
+    - curl "https://s3.amazonaws.com/session-manager-downloads/plugin/latest/ubuntu_64bit/session-manager-plugin.deb" -o "session-manager-plugin.deb"
+    - dpkg -i session-manager-plugin.deb
+    - session-manager-plugin --version
+    - apt-get update -y && apt-get install -y expect
     - mkdir -p ~/.aws
     - echo "${GITLAB_OIDC_TOKEN}" > /tmp/web_identity_token
     - echo -e "[profile default]\nrole_arn=${ROLE_ARN}\nweb_identity_token_file=/tmp/web_identity_token" > ~/.aws/config
   script:
     - cat ~/.aws/config
     - aws sts get-caller-identity
-    # - docker stop <new_container_name> && docker rm <new_container_name>
-    # - docker run -d --restart unless-stopped --name my_container my_image
+    - chmod +x deploy-to-ec2.sh
+    - ./deploy-to-ec2.sh
 
