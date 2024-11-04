@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h1>Build With Lal</h1>
+        <h2>Build With Lal3</h2>
         <Image
           className={styles.logo}
           src="/next.svg"

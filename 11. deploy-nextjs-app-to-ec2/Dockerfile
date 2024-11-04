@@ -5,9 +5,6 @@ RUN apk add --no-cache libc6-compat
 ENV NEXT_TELEMETRY_DISABLED=1 \
     HOSTNAME="0.0.0.0"
 
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
-
 WORKDIR /app
 
 # Install dependencies based on the preferred package manager
@@ -20,12 +17,4 @@ RUN \
 
 COPY ./app .
 
-
-RUN \
-  if [ -f yarn.lock ]; then yarn build; \
-  else echo "Lockfile not found." && exit 1; \
-  fi
-
-USER nextjs
-
-CMD ["node", "server.js"]
+CMD ["yarn", "dev"]
