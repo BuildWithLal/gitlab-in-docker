@@ -2,12 +2,9 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
-
-
   return (
     <div className={styles.page}>
       <main className={styles.main}>
-        <h2>Build With Lal3</h2>
         <Image
           className={styles.logo}
           src="/next.svg"
@@ -18,7 +15,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            <h3>Get started by editing <code>src/app/page.tsx</code>.</h3>
+            Get started by editing <code>src/app/page.tsx</code>.
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
