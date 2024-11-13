@@ -1,0 +1,5 @@
+# package without vulnerabilites
+# requests
+
+# package with vulnerabilites
+requests==2.19.1

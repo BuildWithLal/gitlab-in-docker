@@ -1,0 +1,30 @@
+include:
+  - template: Jobs/Dependency-Scanning.gitlab-ci.yml
+
+build:
+    stage: build
+    image: alpine
+    script:
+        - echo "Build project"
+
+gemnasium-python-dependency_scanning:
+    allow_failure: false # force pipeline to fail if this job fails
+
+    before_script:
+        - apt-get update -y && apt-get install -y jq
+  
+    script:
+        - /analyzer run
+        - HIGH_SEVERITY_COUNT=$(jq '.vulnerabilities | map(select(.severity=="High")) | length' gl-dependency-scanning-report.json )
+        - > 
+            if [[ $HIGH_SEVERITY_COUNT -gt 0 ]]
+            then
+              echo "High severity found"; exit 1
+            else
+              echo "No High severity found"
+            fi
+deploy:
+    stage: deploy
+    image: alpine
+    script:
+      - echo "Deployed"
