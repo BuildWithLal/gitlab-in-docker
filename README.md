@@ -15,6 +15,10 @@ This repo provides a detailed, step-by-step guide for setting up a custom GitLab
 * Dockerized GitLab CI: Docker Executor as a Docker in Docker (docker:dind)
 * Dockerized GitLab CI: Build Docker Images using Google Kaniko
 * Setup GitLab Container Registry  -  GitLab Managed
+* Automating Security in GitLab CI: Set Up Container Scanning
+* Automating Security in GitLab CI: Set Up Dependency Scanning
+* Dockerize Next.JS app for Local development and Production
+* Automate Next.js Deployment to AWS EC2 with GitLab CI
 
 #### How to Use:
 * Clone the Repository: `git clone github.com/BuildWithLal/gitlab-in-docker.git`
