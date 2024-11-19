@@ -1,9 +1,8 @@
-This repo provides a detailed, step-by-step guide for setting up a custom GitLab server and GitLab runner using Docker containers. Each topic is accompanied by a **YouTube tutorial** and a **Medium.com article** for a comprehensive learning experience.
+This repo provides a detailed, step-by-step guide for setting up a custom GitLab server and GitLab runner using Docker containers.
 
 #### Features:
 * Step-by-Step Instructions: Clear and concise steps for setting up GitLab server and runner.
 * Docker Containers: Simplified setup using Docker for easy management and scalability.
-* YouTube Tutorials: Each topic includes a link to a corresponding YouTube video for visual learners.
 * Practical Examples: Real-world scenarios and configurations to get you up and running quickly.
 
 #### Topics Covered:
